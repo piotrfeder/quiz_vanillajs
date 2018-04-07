@@ -1,0 +1,129 @@
+@import './scss/_normalize.scss';
+
+
+$cardo : 'Cardo', serif;
+$montserrat:  'Montserrat', sans-serif;
+
+body {
+    background-color: #f9f9f9;
+}
+
+.transition {
+    transition: all .3s ease-in-out;
+}
+
+header {
+    text-align:center;
+    border-bottom: 1px solid #eee;
+    margin: 0 0 40px 0;
+    padding: 20px 0;
+    background-color: #fff;
+
+    h1 {
+        font-family: $montserrat;
+        font-weight: 800;
+        font-size: 46px;
+    }
+
+    p {
+        font-family: $cardo;
+        font-weight: 300;
+        font-size: 24px;
+    }
+}
+
+.categories {
+    padding: 0 20px;
+    margin: 0 0 40px;
+
+    .category-item {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #eee;
+        border: 1px solid #f9f9f9;
+        margin: 5px 10px;
+        font-family: $cardo;
+        font-size: 18px;
+        @extend .transition;
+        &:hover {
+            border: 1px solid #eee;
+            background-color: #fff;
+            @extend .transition;
+            cursor: pointer;
+            box-shadow: 0 5px 20px #eee;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.quizes-box {
+    max-width: 768px;
+    display:block;
+    margin: 0 auto 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 30px #eee;
+    border: 1px solid #eee;
+
+    .category-title {
+        font-size: 14px;
+        font-family: $cardo;
+    }
+
+    .quiz-box,
+    .score-box {
+        
+        h1 {
+            text-align:center;
+            font-family: $montserrat;
+            font-size: 26px;
+            line-height: 38px;
+        }
+
+        p {
+            font-family: $cardo;
+            font-size: 20px;
+            padding: 10px 0 10px 20px;
+            border-bottom: 1px solid #eee;
+            @extend .transition;
+
+            &:hover {
+                box-shadow: 0 5px 20px #eee;
+                @extend .transition;
+                cursor: pointer;
+            }
+        }
+
+        .correct {
+            background-color: #7CB342;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .incorrect {
+            background-color: #CFD8DC;
+            border-radius: 5px;
+        }
+
+        .question {
+            margin: 0 0 40px;
+            padding: 20px;
+            border-radius: 20px;
+
+            &:nth-child(even)
+            {
+                background-color: #f9f9f9;
+            }
+        
+        
+        }
+
+       
+    }
+}
+
+
+.hide {
+    display: none;
+}
